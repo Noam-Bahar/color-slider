@@ -6,7 +6,7 @@ export const colorState = selector({
     const r = get(redState);
     const g = get(greenState);
     const b = get(blueState);
-    return [r, g, b];
+    return `rgb(${r} ${g} ${b})`;
   },
 });
 
