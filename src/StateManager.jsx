@@ -13,7 +13,6 @@ export const colorState = selector({
 export const redState = atom({
   key: 'redState',
   default: 40,
-  // set: ({ set }) => set(colorState),
 });
 
 export const greenState = atom({
