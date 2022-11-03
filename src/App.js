@@ -1,23 +1,15 @@
 import './App.css';
+import Slider from './components/Slider';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Slider key='slide-red' />
+      <Slider key='slide-green' />
+      <Slider key='slide-blue' />
+      <header className='App-header'>Coolest Project Ever</header>
     </div>
   );
-}
+};
 
 export default App;
