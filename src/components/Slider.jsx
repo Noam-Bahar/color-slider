@@ -1,13 +1,9 @@
 import { useState } from 'react';
-
-const values = {
-  MIN: 0,
-  MID: 127,
-  MAX: 255,
-};
+import { useRecoilState } from 'recoil';
+import { values } from '../definitions';
 
 const Slider = (props) => {
-  const [value, setValue] = useState(values.MID);
+  const [value, setValue] = useRecoilState(props.color);
 
   return (
     <div className='slider'>
