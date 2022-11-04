@@ -1,34 +1,30 @@
 import { useRecoilValue } from 'recoil';
 import './App.css';
-import Slider from './components/Slider';
-import {
-  redState,
-  greenState,
-  blueState,
-  rgb,
-  hsvArray,
-  textColor,
-} from './StateManager';
+import RGBSliders from './components/RGBSliders';
+import HSLSliders from './components/HSLSliders';
+import { rgb, hslArray, textColor } from './StateManager';
 
 const App = () => {
   const color = useRecoilValue(rgb);
   const textBrightness = useRecoilValue(textColor);
-  const { h, s, v } = useRecoilValue(hsvArray);
+  const { h, s, l } = useRecoilValue(hslArray);
 
   return (
     <div
       className='App'
       style={{ backgroundColor: color, color: `hsl(0 0% ${textBrightness}%)` }}
     >
-      <Slider key='slide-red' color={redState} />
-      <Slider key='slide-green' color={greenState} />
-      <Slider key='slide-blue' color={blueState} />
       <header className='App-header'>Coolest Project Ever</header>
+      <br />
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <RGBSliders />
+        <HSLSliders />
+      </div>
       H: {h}
       <br />
       S: {s}
       <br />
-      V: {v}
+      V: {l}
     </div>
   );
 };
