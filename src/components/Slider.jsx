@@ -12,7 +12,7 @@ const Slider = (props) => {
         max={values.MAX}
         value={value}
         onInput={(e) => {
-          setValue(e.target.value);
+          setValue(+e.target.value);
         }}
       />
       <p id='rangeValue'>{value}</p>
