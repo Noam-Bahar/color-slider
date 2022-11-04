@@ -20,11 +20,11 @@ const App = () => {
         <RGBSliders />
         <HSLSliders />
       </div>
-      H: {h}
+      H: {h}°
       <br />
-      S: {s}
+      S: {s}%
       <br />
-      V: {l}
+      L: {l}%
     </div>
   );
 };
